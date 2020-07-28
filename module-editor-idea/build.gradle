@@ -1,0 +1,32 @@
+apply from: "../../TimeCatGradle/config_component.gradle"
+
+android {
+    resourcePrefix "editor_" //给 Module 内的资源名增加前缀, 避免资源名冲突
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api rootProject.ext.timecat["component-SelfRouter"]
+    api rootProject.ext.timecat["component-CommonStatic"]
+
+    api rootProject.ext.timecat["widget-md-editor"]
+    api rootProject.ext.timecat["component-CommonBase"]
+    api rootProject.ext.timecat["component-CommonUI"]
+    api rootProject.ext.timecat["component-BlockUI"]
+    api rootProject.ext.timecat["component-CommonData"]
+    api rootProject.ext.timecat["component-CommonGreenDao"]
+    api rootProject.ext.timecat["component-CommonRoom"]
+    api rootProject.ext.timecat["component-ResBlock"]
+    api rootProject.ext.timecat["component-CommonSetting"]
+
+    api rootProject.ext.timecat["component-SelfXunfei"]
+    api rootProject.ext.timecat["component-SelfRouter"]
+    api rootProject.ext.timecat["component-SelfEventBus"]
+
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+    // loader
+    implementation 'com.billy.android:pre-loader:2.0.1'
+    implementation rootProject.ext.dependencies["BasePopup"]
+
+
+}

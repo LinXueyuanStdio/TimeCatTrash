@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.timecat.module.editor.idea">
+
+    <application>
+
+        <activity
+            android:name="com.timecat.module.editor.idea.ImageViewerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/image_or_video_attachment"
+            android:theme="@style/EverythingDoneTheme.ImageViewer" />
+
+        <!--region 简化主页面,浮层的形式-->
+        <!--endregion-->
+
+        <!--region 小部件-->
+
+        <receiver
+            android:name="com.timecat.module.editor.idea.widget.CreateWidget"
+            android:label="创建日程">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_info_create" />
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.timecat.module.editor.idea.widget.CheckUpcomingWidget"
+            android:label="将要提醒的日程">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_info_check_upcoming" />
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.timecat.module.editor.idea.widget.single.ThingWidgetTiny"
+            android:label="日程">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_info_thing_tiny" />
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.timecat.module.editor.idea.action.broadcast.update_checklist" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.timecat.module.editor.idea.widget.single.ThingWidgetSmall"
+            android:label="日程">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_info_thing_small" />
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.timecat.module.editor.idea.action.broadcast.update_checklist" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.timecat.module.editor.idea.widget.single.ThingWidgetMiddle"
+            android:label="日程">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_info_thing_middle" />
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.timecat.module.editor.idea.action.broadcast.update_checklist" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.timecat.module.editor.idea.widget.single.ThingWidgetLarge"
+            android:label="日程">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_info_thing_large" />
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.timecat.module.editor.idea.action.broadcast.update_checklist" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.timecat.module.editor.idea.widget.list.ThingsListWidget"
+            android:label="正在进行的日程">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_info_things_list" />
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.timecat.module.editor.idea.widget.single.BaseThingWidgetConfiguration"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:label="选择一个日程"
+            android:screenOrientation="user"
+            android:theme="@style/EverythingDoneTheme.ThingWidgetConfiguration">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.timecat.module.editor.idea.widget.single.ThingWidgetConfigurationTiny"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:label="选择一个日程"
+            android:screenOrientation="user"
+            android:theme="@style/EverythingDoneTheme.ThingWidgetConfiguration">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.timecat.module.editor.idea.widget.single.ThingWidgetConfigurationSmall"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:label="选择一个日程"
+            android:screenOrientation="user"
+            android:theme="@style/EverythingDoneTheme.ThingWidgetConfiguration">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.timecat.module.editor.idea.widget.single.ThingWidgetConfigurationMiddle"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:label="选择一个日程"
+            android:screenOrientation="user"
+            android:theme="@style/EverythingDoneTheme.ThingWidgetConfiguration">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.timecat.module.editor.idea.widget.single.ThingWidgetConfigurationLarge"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:label="选择一个日程"
+            android:screenOrientation="user"
+            android:theme="@style/EverythingDoneTheme.ThingWidgetConfiguration">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.timecat.module.editor.idea.widget.list.ThingsListWidgetConfiguration"
+            android:excludeFromRecents="true"
+            android:taskAffinity="com.timecat.module.editor.idea.task.thing_list_widget_config"
+            android:theme="@style/EverythingDoneTheme.Dialog">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RouterActivity" />
+
+
+        <service
+            android:name="com.timecat.module.editor.idea.widget.single.ChecklistWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <service
+            android:name="com.timecat.module.editor.idea.widget.list.ThingsListWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <!--endregion-->
+
+    </application>
+
+</manifest>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.timecat.module.editor.small">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application>
+
+        <activity
+            android:name="com.timecat.module.editor.small.InfoOperationActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@style/EditDialogStyle"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.timecat.module.editor.small.BlockSmallEditorActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@style/EditDialogStyle"
+            android:windowSoftInputMode="adjustNothing" />
+    </application>
+
+</manifest>

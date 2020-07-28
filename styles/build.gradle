@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.androidx_lib["appcompat"]
+    compileOnly rootProject.ext.dependencies["kotlin-stdlib"]
+}
+repositories {
+    mavenCentral()
+}
+
+
+//////// 打包发布配置开始 ////////
+apply plugin: 'maven'
+ext {
+    // 从Github上clone下来的项目的本地地址
+    GITHUB_REPO_PATH = "../../TimeCatMaven"       //这里指定的就是刚刚新建项目后clone下来的在本地的路径
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'styles'
+    PUBLISH_VERSION = rootProject.ext.version["styles-version"]
+}
+uploadArchives {
+    repositories.mavenDeployer {
+        def deployPath = file(project.GITHUB_REPO_PATH)
+        repository(url: "file://${deployPath.absolutePath}")
+        pom.project {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
+        }
+    }
+}
+//////// 打包发布配置结束 ////////

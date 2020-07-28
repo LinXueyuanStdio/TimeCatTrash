@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.timecat.module.editor">
+
+    <application>
+        <!--region 编辑器-->
+        <activity
+          android:launchMode="singleTop"
+          android:name="com.timecat.module.editor.markdown.MarkdownEditorActivity"
+          android:screenOrientation="portrait"/>
+        <activity android:name="com.timecat.module.editor.markdown.MenuSortActivity"/>
+        <!--endregion-->
+    </application>
+
+</manifest>

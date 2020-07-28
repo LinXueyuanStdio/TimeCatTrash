@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/EditorToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:title="@string/feedback"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/emailEditText"
+        style="@style/MaterialEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:hint="@string/contact_email_optional"
+        android:singleLine="true"
+        app:met_floatingLabel="highlight"/>
+
+    <CheckBox
+        android:id="@+id/withLogCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:checked="true"
+        android:text="@string/with_error_logs"/>
+
+    <EditText
+        android:id="@+id/contentEditText"
+        style="@style/MaterialEditText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:background="@null"
+        android:gravity="start|top"
+        android:hint="@string/content"/>
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="com.timecat.module.terminal"
+  android:sharedUserId="com.time.cat"
+  android:sharedUserLabel="@string/terminal_shared_user_label">
+
+  <uses-feature
+    android:name="android.hardware.touchscreen"
+    android:required="false"/>
+  <uses-feature
+    android:name="android.software.leanback"
+    android:required="false"/>
+
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.VIBRATE"/>
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+  <application>
+    <activity
+      android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+      android:label="@string/terminal_application_name"
+      android:launchMode="singleTask"
+      android:name="com.timecat.module.terminal.app.TerminalActivity"
+      android:resizeableActivity="true"
+      android:theme="@style/Terminal_Theme"
+      android:windowSoftInputMode="adjustResize|stateAlwaysVisible">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+      </intent-filter>
+
+      <meta-data
+        android:name="android.app.shortcuts"
+        android:resource="@xml/terminal_shortcuts"/>
+    </activity>
+
+    <activity-alias
+      android:name=".HomeActivity"
+      android:targetActivity="com.timecat.module.terminal.app.TerminalActivity">
+
+      <!-- Launch activity automatically on boot on Android Things devices -->
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.IOT_LAUNCHER"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity-alias>
+
+    <activity
+      android:exported="false"
+      android:label="@string/terminal_application_name"
+      android:name="com.timecat.module.terminal.app.TerminalHelpActivity"
+      android:parentActivityName="com.timecat.module.terminal.app.TerminalActivity"
+      android:resizeableActivity="true"
+      android:theme="@android:style/Theme.Material.Light.DarkActionBar"/>
+
+    <activity
+      android:excludeFromRecents="true"
+      android:label="@string/terminal_application_name"
+      android:name="com.timecat.module.terminal.filepicker.TerminalFileReceiverActivity"
+      android:noHistory="true"
+      android:resizeableActivity="true"
+      android:taskAffinity="com.timecat.module.terminal.filereceiver"
+      android:theme="@style/Terminal_Theme">
+      <!-- Accept multiple file types when sending. -->
+      <intent-filter>
+        <action android:name="android.intent.action.SEND"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+
+        <data android:mimeType="application/*"/>
+        <data android:mimeType="audio/*"/>
+        <data android:mimeType="image/*"/>
+        <data android:mimeType="message/*"/>
+        <data android:mimeType="multipart/*"/>
+        <data android:mimeType="text/*"/>
+        <data android:mimeType="video/*"/>
+      </intent-filter>
+      <!-- Be more restrictive for viewing files, restricting ourselves to text files. -->
+      <intent-filter tools:ignore="AppLinkUrlError">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+
+        <data android:mimeType="text/*"/>
+        <data android:mimeType="application/json"/>
+        <data android:mimeType="application/*xml*"/>
+        <data android:mimeType="application/*latex*"/>
+        <data android:mimeType="application/javascript"/>
+      </intent-filter>
+    </activity>
+
+    <provider
+      android:authorities="com.timecat.module.terminal.documents"
+      android:exported="true"
+      android:grantUriPermissions="true"
+      android:name="com.timecat.module.terminal.filepicker.TerminalDocumentsProvider"
+      android:permission="android.permission.MANAGE_DOCUMENTS">
+      <intent-filter>
+        <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+      </intent-filter>
+    </provider>
+
+    <service
+      android:exported="false"
+      android:name="com.timecat.module.terminal.app.TerminalService"/>
+
+    <receiver android:name="com.timecat.module.terminal.app.TerminalOpenReceiver"/>
+
+    <provider
+      android:authorities="com.timecat.module.terminal.files"
+      android:exported="true"
+      android:grantUriPermissions="true"
+      android:name="com.timecat.module.terminal.app.TerminalOpenReceiver$ContentProvider"
+      android:readPermission="android.permission.permRead"/>
+
+    <meta-data
+      android:name="com.sec.android.support.multiwindow"
+      android:value="true"/>
+  </application>
+
+</manifest>

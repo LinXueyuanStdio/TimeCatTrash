@@ -1,0 +1,26 @@
+apply from: "../../TimeCatGradle/config_component.gradle"
+
+android {
+    resourcePrefix "editor_"
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api rootProject.ext.timecat["component-CommonBase"]
+    api rootProject.ext.timecat["component-CommonUI"]
+    api rootProject.ext.timecat["component-BlockUI"]
+    api rootProject.ext.timecat["component-CommonData"]
+    api rootProject.ext.timecat["component-ResBlock"]
+    api rootProject.ext.timecat["component-CommonStatic"]
+    api rootProject.ext.timecat["component-SelfRouter"]
+    api rootProject.ext.timecat["component-SelfEventBus"]
+    api rootProject.ext.timecat["component-PackAlert"]
+    api rootProject.ext.timecat["widget-md-editor"]
+
+    implementation 'com.billy.android:pre-loader:2.0.1'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.6.0'
+    implementation rootProject.ext.dependencies["dagger2"]
+    kapt rootProject.ext.dependencies["butterknife-compiler"]
+    kapt rootProject.ext.dependencies["arouter-compiler"]
+    kapt rootProject.ext.dependencies["dagger2-compiler"]
+}

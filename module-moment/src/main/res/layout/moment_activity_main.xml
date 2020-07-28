@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".activity.circledemo.MomentFriendCircleActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.timecat.component.lightui.widget.pullrecyclerview.CircleRecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.timecat.component.lightui.widget.systembar.StatusBarViewPlaceHolder
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.timecat.component.lightui.widget.common.TitleBar
+                android:id="@id/moment_title_bar_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title_text=""
+                app:transparentMode="true"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <com.timecat.component.lightui.widget.commentwidget.CommentBox
+        android:id="@+id/widget_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

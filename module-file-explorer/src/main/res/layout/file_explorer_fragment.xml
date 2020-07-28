@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pathScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/recentPathBtn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="?android:attr/windowBackground"
+            android:src="@drawable/ic_arrow_drop_down_black"/>
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/nameFilterEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_edittext_background"
+        android:hint="@string/filter_by_name"
+        android:maxLength="20"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textSize="12sp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/explorer_swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <in.myinnos.alphabetsindexfastscrollrecycler.IndexFastScrollRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/emptyLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/empty"
+            android:text="@string/no_data"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+</LinearLayout>

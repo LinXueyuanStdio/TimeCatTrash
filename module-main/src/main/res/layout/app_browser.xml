@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitcher1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out">
+
+        <ViewSwitcher
+            android:id="@+id/viewSwitcher2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextUrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:background="#00000000"
+                        android:ems="10"
+                        android:hint="Enter address..."
+                        android:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|numberPassword|phone|date|time"
+                        android:padding="8dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="#dddddd"
+                        android:textColorHint="#aaaaaa"
+                        android:textCursorDrawable="@drawable/edittext_cursor_background"
+                        android:textSize="12sp"/>
+
+                    <ImageButton
+                        android:id="@+id/imageButtonBrowserGo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_highlight"
+                        android:padding="4dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_arrow_forward_white_24dp"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"/>
+                </RelativeLayout>
+
+                <WebView
+                    android:id="@+id/webkit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButtonBrowserBack"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_highlight"
+                        android:padding="4dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_arrow_back_white_24dp"/>
+
+                    <ImageButton
+                        android:id="@+id/imageButtonBrowserForward"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_highlight"
+                        android:padding="4dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_arrow_forward_white_24dp"/>
+
+                    <ImageButton
+                        android:id="@+id/imageButtonBrowserReload"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_highlight"
+                        android:padding="6dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/menu_undo"/>
+
+                    <ImageButton
+                        android:id="@+id/imageButtonBrowserStop"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_highlight"
+
+                        android:padding="4dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_window_close"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1.0"
+                    android:divider="#00000000"
+                    android:listSelector="@drawable/selector_ripple_dark"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center_vertical"
+                        android:background="#11ffffff"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/imageButtonBackFromList"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_highlight"
+                        android:padding="4dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_arrow_back_white_24dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ViewSwitcher>
+
+        <ViewSwitcher
+            android:id="@+id/viewSwitcher3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewNoFiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:text="No history!"
+                    android:textColor="#aaaaaa"
+                    android:textSize="13sp"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#11ffffff"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/imageButtonBackFromNoItems"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_highlight"
+
+                        android:padding="4dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_arrow_back_white_24dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"/>
+        </ViewSwitcher>
+    </ViewSwitcher>
+</RelativeLayout>

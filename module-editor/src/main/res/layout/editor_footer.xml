@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_add_task_ll_footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/dialog_add_task_tv_important_urgent"
+
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="@dimen/margin_auto"
+        android:background="#50f44336"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="重要且紧急"
+        android:textColor="@color/red"
+        android:textSize="10dp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/dialog_add_task_tv_date"
+
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="@dimen/margin_auto"
+        android:background="#502196f3"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="02.07"
+        android:textColor="@color/blue"
+        android:textSize="10dp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/dialog_add_task_tv_time"
+
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="@dimen/margin_auto"
+        android:background="#502196f3"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="全天"
+        android:textColor="@color/blue"
+        android:textSize="10dp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/dialog_add_task_tv_remind"
+
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="@dimen/margin_auto"
+        android:background="#504faf50"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="不提醒"
+        android:textColor="@color/green"
+        android:textSize="10dp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/dialog_add_task_tv_notebook"
+
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="@dimen/margin_auto"
+        android:background="#50ff9800"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="文集 + "
+        android:textColor="@color/orange"
+        android:textSize="10dp"
+        />
+
+    <TextView
+        android:id="@+id/dialog_add_task_tv_plan"
+
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="@dimen/margin_auto"
+        android:background="#50ff9800"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="计划 + "
+        android:textColor="@color/orange"
+        android:textSize="10dp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/dialog_add_task_tv_tag"
+
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="@dimen/margin_auto"
+        android:background="#50ff9800"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="标签"
+        android:textColor="@color/orange"
+        android:textSize="10dp"
+        />
+</LinearLayout>
+

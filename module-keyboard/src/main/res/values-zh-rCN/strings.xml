@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">时光猫</string>
+    <string name="codeboard_ime">时光猫键盘 IME</string>
+    <string name="subtype_en_US">时光猫键盘-%s</string>
+    <string name="subtype_fr_FR">时光猫键盘-%s</string>
+    <string name="printf">printf(\"\");</string>
+    <string name="scanf">scanf(\"\");</string>
+    <string name="for_">for(;;){\n\t}</string>
+    <string name="app_intro">时光猫键盘 - 简介</string>
+    <string name="change_keyboard">更换键盘</string>
+    <string name="re_open_keyboard_to_see_changes">打开键盘，看看改了什么</string>
+    <string name="replace_arrows_with_cut_copy_paste_shortcuts">替换箭头为 剪切/复制/粘贴 的快捷方式</string>
+    <string name="popup_previews_of_characters">打字时出现字符气泡</string>
+    <string name="sound_on_keypress">打字时开启声音</string>
+    <string name="vibrate_on_keypress">打字时开启震动</string>
+    <string name="keyboard_size">键盘大小</string>
+    <string name="smallest_for_tablets">最小 (只字母表)</string>
+    <string name="material_dark">Material 暗色</string>
+    <string name="material_light">Material 亮色</string>
+    <string name="pure_black">纯黑</string>
+    <string name="white">纯白</string>
+    <string name="purple">紫色</string>
+    <string name="blue">蓝色</string>
+    <string name="layout">布局</string>
+    <string name="qwerty">Qwerty</string>
+    <string name="azerty">Azerty</string>
+    <string name="tutorial_to_enable_keyboard">如何开启键盘</string>
+    <string name="first_enable_codeboard">首先, 启用键盘</string>
+    <string name="enable_keyboard">启用键盘</string>
+    <string name="next_choose_codeboard_as_your_keyboard">然后, 切换键盘</string>
+    <string name="choose_keyboard">切换键盘</string>
+</resources>

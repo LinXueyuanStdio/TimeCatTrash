@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/player_thumb"/>
+        </RelativeLayout>
+
+        <SeekBar
+            android:id="@+id/seekBarMusic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressDrawable="@drawable/progress_bg"
+            android:thumb="@drawable/thumb_back"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp">
+
+            <TextView
+                android:id="@+id/textViewSongName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1.0"
+                android:ellipsize="marquee"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="No songs playing"
+                android:textColor="#ffffff"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:id="@+id/textViewSongTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:00"
+                android:textColor="#ffffff"
+                android:textSize="12dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/buttonPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/selector_highlight"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/menu_previous"/>
+
+            <ImageButton
+                android:id="@+id/buttonPlayPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/selector_highlight"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/menu_play"/>
+
+            <ImageButton
+                android:id="@+id/buttonNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/selector_highlight"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/menu_next"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

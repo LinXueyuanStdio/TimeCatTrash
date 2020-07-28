@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_find"
+          app:actionViewClass="androidx.appcompat.widget.SearchView"
+          android:title="@string/text_search"
+          android:icon="@drawable/ic_search_white_24dp"
+          app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/edit"
+        android:icon="@drawable/ic_edit_white_24dp"
+        android:title="@string/menu_item_edit"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_item_export_md"
+        android:title="@string/menu_item_export_md"/>
+    <item
+        android:id="@+id/menu_item_export_html"
+        android:title="@string/menu_item_export_html"/>
+    <item
+        android:id="@+id/menu_item_export_jpg"
+        android:title="@string/menu_item_export_jpg"/>
+    <item
+        android:id="@+id/menu_item_export_pdf"
+        android:title="@string/menu_item_export_pdf"/>
+    <item
+        android:id="@+id/menu_item_share_md"
+        android:title="@string/menu_item_share_md"/>
+    <item
+        android:id="@+id/menu_item_share_html"
+        android:title="@string/menu_item_share_html"/>
+    <item
+        android:id="@+id/menu_item_share_jpg"
+        android:title="@string/menu_item_share_jpg"/>
+</menu>

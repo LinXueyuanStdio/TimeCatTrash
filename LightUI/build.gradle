@@ -1,0 +1,53 @@
+apply from: "../../TimeCatGradle/config_base.gradle"
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.alibaba.arouter'
+
+android {
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+}
+
+dependencies {
+    api rootProject.ext.timecat["widget-photoview"]
+    api rootProject.ext.timecat["component-CommonData"]
+    api rootProject.ext.timecat["component-CommonBmob"]
+    api rootProject.ext.timecat["component-CommonSDK"]
+    api rootProject.ext.timecat["component-SelfRouter"]
+
+    api 'me.everything:overscroll-decor-android:1.0.4'
+    api rootProject.ext.dependencies["FlowLayout"]
+    api rootProject.ext.dependencies["BasePopup"]
+
+}
+
+
+//////// 打包发布配置开始 ////////
+apply plugin: 'maven'
+ext {
+    // 从Github上clone下来的项目的本地地址
+    GITHUB_REPO_PATH = "../../TimeCatMaven"       //这里指定的就是刚刚新建项目后clone下来的在本地的路径
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'lightui'
+    PUBLISH_VERSION = rootProject.ext.component_lightui_version
+}
+uploadArchives {
+    repositories.mavenDeployer {
+        def deployPath = file(project.GITHUB_REPO_PATH)
+        repository(url: "file://${deployPath.absolutePath}")
+        pom.project {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
+        }
+    }
+}
+//////// 打包发布配置结束 ////////

@@ -1,0 +1,28 @@
+<resources>
+
+    <style name="Moment_Transparent_FullScreen" parent="AppTheme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+
+    </style>
+
+    <style name="Moment_basedivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/gray_divider</item>
+    </style>
+
+    <style name="Moment_basedivider_top_16" parent="Moment_basedivider">
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="Moment_basedivider_bold" parent="Moment_basedivider">
+        <item name="android:layout_height">16dp</item>
+    </style>
+
+    <style name="Moment_basedivider_middle_light" parent="Moment_basedivider_bold">
+        <item name="android:layout_height">8dp</item>
+    </style>
+
+</resources>

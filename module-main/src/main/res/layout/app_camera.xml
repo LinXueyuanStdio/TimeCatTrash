@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"/>
+
+    <ImageView
+        android:id="@+id/imageViewCameraClick"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="2dp"
+        android:background="@drawable/circular_shadow_dark_background"
+        android:clickable="true"
+        android:padding="6dp"
+        android:src="@drawable/ic_window_hide"/>
+
+    <TextView
+        android:id="@+id/textViewSaving"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="8dp"
+        android:text="Saving..."
+        android:textColor="#dddddd"
+        android:textSize="12dp"
+        android:visibility="invisible"/>
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<resources>
+
+    <style name="ColorPickerAnimation">
+        <item name="android:windowEnterAnimation">@anim/color_picker_show</item>
+        <item name="android:windowExitAnimation">@anim/color_picker_hide</item>
+    </style>
+    <style name="QuickRemindPickerAnimation">
+        <item name="android:windowEnterAnimation">@anim/quick_remind_picker_show</item>
+        <item name="android:windowExitAnimation">@anim/quick_remind_picker_hide</item>
+    </style>
+
+    <style name="TimeTypePickerAnimation">
+        <item name="android:windowEnterAnimation">@anim/time_type_picker_show</item>
+        <item name="android:windowExitAnimation">@anim/time_type_picker_hide</item>
+    </style>
+
+    <style name="EverythingDoneTheme.ImageViewer.Actionbar" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorControlNormal">#FFFFFF</item>
+    </style>
+    <style name="EverythingDoneTheme.ImageViewer" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <style name="WhiteListStyle" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/control_highlight_light</item>
+    </style>
+
+    <style name="BlackListStyle" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/black_26p</item>
+    </style>
+
+    <style name="EverythingDoneTheme.ThingWidgetConfiguration"
+        parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="EverythingDoneTheme.Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

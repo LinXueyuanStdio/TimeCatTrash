@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingTop="@dimen/moment_item_padding"
+  android:paddingBottom="8dp"
+  android:paddingLeft="@dimen/moment_item_padding"
+  android:paddingRight="@dimen/moment_item_padding">
+
+  <com.timecat.component.lightui.widget.imageview.RoundedImageView
+    android:id="@+id/avatar"
+    android:layout_width="@dimen/moment_item_avatar"
+    android:layout_height="@dimen/moment_item_avatar"
+    android:scaleType="centerCrop"
+    app:corner_radius="6dp"
+    tools:src="@android:drawable/ic_dialog_info"/>
+
+  <TextView
+    android:id="@+id/nick"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_alignTop="@id/avatar"
+    android:layout_toRightOf="@id/avatar"
+    android:textColor="@color/nick"
+    android:textSize="@dimen/moment_normal_font"
+    tools:text="kimoji"/>
+
+  <TextView
+    android:id="@+id/help_yourself"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:text="自助推荐"
+    android:textColor="#AFAFAF"/>
+</RelativeLayout>

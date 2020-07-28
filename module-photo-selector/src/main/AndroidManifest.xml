@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.timecat.module.photoselector">
+
+    <application>
+        <activity
+          android:name=".PhotoSelectActivity"
+          android:configChanges="keyboard|keyboardHidden|orientation"
+          android:screenOrientation="portrait"
+          android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+          />
+        <activity
+          android:name=".PhotoMultiBrowserActivity"
+          android:configChanges="keyboard|keyboardHidden|orientation"
+          android:theme="@style/PhotoSelector_FullScreen"
+          />
+    </application>
+
+</manifest>

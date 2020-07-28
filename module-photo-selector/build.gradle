@@ -1,0 +1,10 @@
+apply from: "../../TimeCatGradle/config_component.gradle"
+
+android {
+    resourcePrefix "photo_selector_" //给 Module 内的资源名增加前缀, 避免资源名冲突
+}
+
+dependencies {
+    api rootProject.ext.timecat["component-LightUI"]
+    implementation rootProject.ext.dependencies["eventBus"]
+}

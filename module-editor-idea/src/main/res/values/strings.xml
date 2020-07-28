@@ -1,0 +1,137 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--——————————————————————General strings——————————————————————-->
+    <string name="after">after</string>
+
+    <string name="sticky_thing">置顶的记事</string>
+
+
+    <!--——————————————————————Task descriptions——————————————————————-->
+    <!--also used in appwidget and shortcut-->
+
+    <!--DoingActivity-->
+    <string name="cd_doing">正在做</string>
+    <string name="cd_doing_add_5_min">增加5分钟</string>
+    <string name="cd_doing_strict_mode_off">进入严格模式</string>
+    <string name="cd_doing_strict_mode_on">退出严格模式</string>
+    <string name="cd_doing_cancel_doing">停止做这件事</string>
+    <string name="underway">正在进行</string>
+    <string name="cd_things_list_widget_setting">打开记事列表小部件设置</string>
+    <string name="title_create_thing">创建记事</string>
+    <string name="private_thing">私密记事</string>
+    <string name="ongoing_thing">在通知栏中显示的记事</string>
+
+    <string name="check_private_thing">查看私密记事</string>
+    <string name="app_widget_config_alpha">透明度:</string>
+    <string name="things_list_config_alpha_header">顶部栏同时透明</string>
+    <string name="things_list_config_simple_view">采用简单的记事视图</string>
+    <string name="cd_app_widget_preview_background">小部件预览背景</string>
+    <string name="act_finish">完成</string>
+    <string name="title_activity_things_list_widget_configuration">选择正在进行的记事</string>
+    <!--——————————————————————Activity titles————————————————————————-->
+    <string name="image_or_video_attachment">Image or Video Attachment</string> <!--for ImageViewerActivity and more-->
+    <string name="habit_last_five">最近五次完成情况:</string>
+
+
+
+    <!--color-->
+    <string-array name="thing_colors_names">
+        <item>@string/blue_grey_500</item>
+        <item>@string/my_cyan</item>
+        <item>@string/blue_grey_deep_blue</item>
+        <item>@string/blue_grey_deep_grey</item>
+        <item>@string/brown</item>
+        <item>@string/blue_deep</item>
+        <item>@string/pine_green</item>
+        <item>@string/my_purple</item>
+        <item>@string/elegant_orange</item>
+        <item>@string/Aein_red</item>
+    </string-array>
+    <string name="blue_grey_500">blue grey</string>
+    <string name="my_cyan">cyan</string>
+    <string name="blue_grey_deep_blue">deep grey blue</string>
+    <string name="blue_grey_deep_grey">deep blue grey</string>
+    <string name="brown">brown</string>
+    <string name="blue_deep">deep blue</string>
+    <string name="pine_green">pine green</string>
+    <string name="my_purple">grey purple</string>
+    <string name="elegant_orange">elegant orange</string>
+    <string name="Aein_red">Aein red</string>
+
+    <!--Sharing a Thing-->
+
+    <!--——————————————————————General actions——————————————————————-->
+    <!--used in other places, too-->
+
+    <!--In dialogs-->
+    <string name="confirm">CONFIRM</string>
+    <string name="cancel" tools:ignore="ButtonCase">CANCEL</string>
+
+
+    <!--——————————————————————Actions in menu, fab and notification——————————————————————-->
+    <!--ThingsActivity normal-->
+
+
+
+    <!--——————————————————————Actions not in menu, fab or notification——————————————————————-->
+
+
+
+
+    <!--DetailActivity check habit-->
+
+    <!--DetailActivity special text events-->
+    <string name="act_open_in_browser">Browse</string>
+    <string name="act_dial">Dial</string>
+    <string name="act_send_email">Send Email</string>
+    <string name="act_open_in_map">Visit</string>
+    <string name="act_edit">Edit</string>
+
+    <!--——————————————————————General alerts, toasts and errors——————————————————————-->
+    <string name="success_clipboard">Copied to clipboard successfully</string>
+
+
+
+    <!--Searching-->
+    <string name="all_color">ALL COLOR</string>
+
+
+
+
+
+    <!--ThingDoingDialogFragment-->
+
+
+
+
+    <string name="file_size">File Size</string>
+
+
+
+    <!--ImageViewerActivity-->
+    <string name="alert_delete_attachment">Are you sure to delete this attachment?</string>
+
+
+
+    <!--StatisticActivity-->
+
+
+    <!--AboutActivity-->
+
+
+
+
+    <!--SettingsActivity-->
+    <!--attachment-->
+    <!--general-->
+
+
+
+
+
+    <!--time of day rec item-->
+
+    <!--picker-->
+    <string name="cd_picked">Picked,</string>
+    <string name="cd_unpicked">Unpicked,</string>
+</resources>

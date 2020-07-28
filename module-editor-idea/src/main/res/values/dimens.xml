@@ -1,0 +1,4 @@
+<resources>
+
+    <dimen name="rv_things_padding">6dp</dimen>
+</resources>

@@ -1,0 +1,105 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="main_miniapp_running">运行中</string>
+    <string name="main_miniapp_mininized">最小化</string>
+    <string name="main_miniapp_flashlight">闪光灯</string>
+    <string name="main_miniapp_bilibili">BiliBili</string>
+    <string name="main_miniapp_bilibili_cover">BiliBili 封面图</string>
+    <string name="main_miniapp_browser">浏览器</string>
+    <string name="main_miniapp_calculator">计算器</string>
+    <string name="main_miniapp_calender">日历</string>
+    <string name="main_miniapp_camera">照相机</string>
+    <string name="main_miniapp_contacts">通讯录</string>
+    <string name="main_miniapp_dialer">电话</string>
+    <string name="main_miniapp_facebook">Facebook</string>
+    <string name="main_miniapp_files">文件</string>
+    <string name="main_miniapp_gallery">图片</string>
+    <string name="main_miniapp_GMail">GMail</string>
+    <string name="main_miniapp_Launcher">应用启动器</string>
+    <string name="main_miniapp_Maps">地图</string>
+    <string name="main_miniapp_Markdown_Render">Markdown 渲染器</string>
+    <string name="main_miniapp_Music">音乐</string>
+    <string name="main_miniapp_Notes">记事</string>
+    <string name="main_miniapp_Paint">画板</string>
+    <string name="main_miniapp_Recorder">录音</string>
+    <string name="main_miniapp_Stopwatch">倒计时</string>
+    <string name="main_miniapp_System">系统</string>
+    <string name="main_miniapp_Twitter">Twitter</string>
+    <string name="main_miniapp_Video">视频</string>
+    <string name="main_miniapp_Volume">音量</string>
+    <string name="main_miniapp_YouTube">YouTube</string>
+
+    <string name="main_miniapp_Desktop">桌面模式 开/关</string>
+    <string name="main_miniapp_Home">主页</string>
+
+    <string name="main_miniapp_setasHome">设为主页</string>
+    <string name="main_miniapp_Copy">复制</string>
+    <string name="main_miniapp_Share">分享</string>
+    <string name="main_miniapp_History">历史</string>
+    <string name="main_miniapp_clearHistory">清空历史</string>
+    <string name="main_miniapp_Standard">标准</string>
+    <string name="main_miniapp_Paste">粘贴</string>
+    <string name="main_miniapp_Advanced">进阶</string>
+    <string name="main_miniapp_FlashONOFF">手电筒 开/关</string>
+    <string name="main_miniapp_AddContact">添加联系人</string>
+    <string name="main_miniapp_Reload">重新加载</string>
+    <string name="main_miniapp_AllSongs">所有歌曲</string>
+    <string name="main_miniapp_NowPlaying">正在播放</string>
+    <string name="main_miniapp_ShuffleONOFF">随机 开/关</string>
+    <string name="main_miniapp_Open">打开</string>
+    <string name="main_miniapp_Save">保存</string>
+    <string name="main_miniapp_Undo">撤销</string>
+    <string name="main_miniapp_AllVideos">所有视频</string>
+
+    <!--<string name="main_miniapp_running">Running</string>-->
+    <!--<string name="main_miniapp_mininized">Minimized</string>-->
+    <!--<string name="main_miniapp_flashlight">Flashlight</string>-->
+    <!--<string name="main_miniapp_bilibili">BiliBili</string>-->
+    <!--<string name="main_miniapp_bilibili_cover">BiliBili Cover</string>-->
+    <!--<string name="main_miniapp_browser">Browser</string>-->
+    <!--<string name="main_miniapp_calculator">Calculator</string>-->
+    <!--<string name="main_miniapp_calender">Calender</string>-->
+    <!--<string name="main_miniapp_camera">Camera</string>-->
+    <!--<string name="main_miniapp_contacts">Contacts</string>-->
+    <!--<string name="main_miniapp_dialer">Dialer</string>-->
+    <!--<string name="main_miniapp_facebook">Facebook</string>-->
+    <!--<string name="main_miniapp_files">Files</string>-->
+    <!--<string name="main_miniapp_gallery">Gallery</string>-->
+    <!--<string name="main_miniapp_GMail">GMail</string>-->
+    <!--<string name="main_miniapp_Launcher">Launcher</string>-->
+    <!--<string name="main_miniapp_Maps">Maps</string>-->
+    <!--<string name="main_miniapp_Markdown_Render">Markdown Render</string>-->
+    <!--<string name="main_miniapp_Music">Music</string>-->
+    <!--<string name="main_miniapp_Notes">Notes</string>-->
+    <!--<string name="main_miniapp_Paint">Paint</string>-->
+    <!--<string name="main_miniapp_Recorder">Recorder</string>-->
+    <!--<string name="main_miniapp_Stopwatch">Stopwatch</string>-->
+    <!--<string name="main_miniapp_System">System</string>-->
+    <!--<string name="main_miniapp_Twitter">Twitter</string>-->
+    <!--<string name="main_miniapp_Video">Video</string>-->
+    <!--<string name="main_miniapp_Volume">Volume</string>-->
+    <!--<string name="main_miniapp_YouTube">YouTube</string>-->
+
+    <!--<string name="main_miniapp_Desktop">Desktop ON/OFF</string>-->
+    <!--<string name="main_miniapp_Home">Home</string>-->
+
+    <!--<string name="main_miniapp_setasHome">Set as Home</string>-->
+    <!--<string name="main_miniapp_Copy">Copy</string>-->
+    <!--<string name="main_miniapp_Share">Share</string>-->
+    <!--<string name="main_miniapp_History">History</string>-->
+    <!--<string name="main_miniapp_clearHistory">Clear History</string>-->
+    <!--<string name="main_miniapp_Standard">Standard</string>-->
+    <!--<string name="main_miniapp_Paste">Paste</string>-->
+    <!--<string name="main_miniapp_Advanced">Advanced</string>-->
+    <!--<string name="main_miniapp_FlashONOFF">Flash ON/OFF</string>-->
+    <!--<string name="main_miniapp_AddContact">Add Contact</string>-->
+    <!--<string name="main_miniapp_Reload">Reload</string>-->
+    <!--<string name="main_miniapp_AllSongs">All Songs</string>-->
+    <!--<string name="main_miniapp_NowPlaying">Now Playing</string>-->
+    <!--<string name="main_miniapp_ShuffleONOFF">Shuffle ON/OFF</string>-->
+    <!--<string name="main_miniapp_Open">Open</string>-->
+    <!--<string name="main_miniapp_Save">Save</string>-->
+    <!--<string name="main_miniapp_Undo">Undo</string>-->
+    <!--<string name="main_miniapp_AllVideos">All Videos</string>-->
+
+</resources>

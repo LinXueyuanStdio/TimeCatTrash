@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layoutPopupAnchor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-2dp"/>
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitcher1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out">
+
+        <ViewSwitcher
+            android:id="@+id/viewSwitcher2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/editTextNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autoLink="web|email|phone|all"
+                    android:background="#00000000"
+                    android:ems="10"
+                    android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                    android:hint="Your notes..."
+                    android:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|phone"
+                    android:linksClickable="true"
+                    android:padding="8dp"
+                    android:textColor="#dddddd"
+                    android:textColorHint="#aaaaaa"
+                    android:textCursorDrawable="@drawable/edittext_cursor_background"
+                    android:textSize="13sp"/>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editTextFilename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:ems="10"
+                    android:hint="Enter file name..."
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp"
+                    android:textColor="#dddddd"
+                    android:textColorHint="#aaaaaa"
+                    android:textCursorDrawable="@drawable/edittext_cursor_background"
+                    android:textSize="13sp"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="#11ffffff"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButtonCancel"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_highlight"
+                        android:padding="4dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_no_white_24dp"/>
+
+                    <ImageButton
+                        android:id="@+id/imageButtonSave"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_highlight"
+                        android:padding="4dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_ok_white_36dp"/>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ViewSwitcher>
+
+        <ViewSwitcher
+            android:id="@+id/viewSwitcher3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1.0"
+                    android:divider="#00000000"
+                    android:listSelector="@drawable/selector_ripple_dark"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#11ffffff"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/imageButtonBackFromList"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_highlight"
+                        android:padding="4dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_arrow_back_white_24dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewNoFiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="8dp"
+                    android:text="No readNote notes!"
+                    android:textColor="#aaaaaa"
+                    android:textSize="13sp"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#11ffffff"
+                        android:visibility="visible"/>
+
+                    <ImageButton
+                        android:id="@+id/imageButtonBackFromNoFiles"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_highlight"
+                        android:padding="4dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_arrow_back_white_24dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ViewSwitcher>
+    </ViewSwitcher>
+</RelativeLayout>

@@ -1,0 +1,9 @@
+apply plugin: 'java'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'org.msgpack:msgpack-core:0.8.11'
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"

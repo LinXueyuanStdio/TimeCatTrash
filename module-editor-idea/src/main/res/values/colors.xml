@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+
+
+
+    <color name="app_accent">#FFEB3B</color>
+
+    <color name="bg_statusbar_lollipop">#24000000</color>
+</resources>

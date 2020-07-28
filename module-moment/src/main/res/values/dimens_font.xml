@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="moment_big_font">20sp</dimen>
+    <dimen name="moment_middle_font">16sp</dimen>
+    <dimen name="moment_normal_font">14sp</dimen>
+    <dimen name="moment_small_font">12sp</dimen>
+    <dimen name="moment_s_small_font">10sp</dimen>
+    <dimen name="moment_nano_font">8sp</dimen>
+
+
+    <dimen name="moment_title_font">18sp</dimen>
+</resources>

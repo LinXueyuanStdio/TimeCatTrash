@@ -1,0 +1,33 @@
+apply from: "../../TimeCatGradle/config_component.gradle"
+
+android {
+    resourcePrefix "data_" //给 Module 内的资源名增加前缀, 避免资源名冲突
+}
+
+dependencies {
+    api rootProject.ext.timecat["component-CommonData"]
+    api rootProject.ext.timecat["component-SelfRouter"]
+}
+
+
+//////// 打包发布配置开始 ////////
+apply plugin: 'maven'
+ext {
+    // 从Github上clone下来的项目的本地地址
+    GITHUB_REPO_PATH = "../../TimeCatMaven"       //这里指定的就是刚刚新建项目后clone下来的在本地的路径
+    PUBLISH_GROUP_ID = 'com.timecat.module'
+    PUBLISH_ARTIFACT_ID = 'module-data'
+    PUBLISH_VERSION = rootProject.ext.module_data_version
+}
+uploadArchives {
+    repositories.mavenDeployer {
+        def deployPath = file(project.GITHUB_REPO_PATH)
+        repository(url: "file://${deployPath.absolutePath}")
+        pom.project {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
+        }
+    }
+}
+//////// 打包发布配置结束 ////////

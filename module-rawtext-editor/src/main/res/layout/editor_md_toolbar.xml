@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/note_bottom_menu_height"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    tools:layout_height="@dimen/note_bottom_menu_height_double">
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom_editors"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/note_bottom_menu_height">
+
+        <HorizontalScrollView
+            android:id="@+id/hs_bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/note_bottom_menu_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/note_bottom_editors">
+
+            <LinearLayout
+                android:id="@+id/ll_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="60dp"/>
+
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_shade"
+            android:layout_width="@dimen/note_bottom_menu_height"
+            android:layout_height="@dimen/note_bottom_menu_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:src="@color/note_bottom_editors"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_setting"
+            style="@style/style_note_bottom_button"
+            android:layout_width="@dimen/note_bottom_menu_height"
+            android:layout_height="@dimen/note_bottom_menu_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_settings_black"/>
+
+        <View
+            android:layout_width="@dimen/note_bottom_menu_height"
+            android:layout_height="@dimen/note_bottom_menu_height"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/iv_shade"
+            android:background="@drawable/rte_shadow_format"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/note_bottom_menu_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/note_bottom_editors">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_insert_picture"
+            style="@style/style_note_bottom_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_attach_file_white"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_insert_link"
+            style="@style/style_note_bottom_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_link"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_table"
+            style="@style/style_note_bottom_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_grid_on_grey_24dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_self_design"
+            style="@style/style_note_bottom_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_selfdesign"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_enable_format"
+            style="@style/style_note_bottom_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_text_format_black_24dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_undo"
+            style="@style/style_note_bottom_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/m_undo_white"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_redo"
+            style="@style/style_note_bottom_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/m_redo_white"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_above="@id/rl_bottom_menu"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/above_shadow"/>
+
+</RelativeLayout>

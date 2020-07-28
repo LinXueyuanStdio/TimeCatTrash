@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TimeCat</string>
+    <string name="codeboard_ime">TimeCat KeyBoard IME</string>
+    <string name="subtype_en_US">TimeCat KeyBoard-%s</string>
+    <string name="subtype_fr_FR">TimeCat KeyBoard-%s</string>
+    <string name="printf">printf(\"\");</string>
+    <string name="scanf">scanf(\"\");</string>
+    <string name="for_">for(;;){\n\t}</string>
+    <string name="app_intro">TimeCat KeyBoard - Intro</string>
+    <string name="change_keyboard">Change Keyboard</string>
+    <string name="re_open_keyboard_to_see_changes">Re-open keyboard to see changes</string>
+    <string name="replace_arrows_with_cut_copy_paste_shortcuts">Replace arrows with cut/copy/paste shortcuts?</string>
+    <string name="popup_previews_of_characters">Popup previews of characters?</string>
+    <string name="sound_on_keypress">Sound on keypress?</string>
+    <string name="vibrate_on_keypress">Vibrate on keypress?</string>
+    <string name="keyboard_size">Keyboard Size</string>
+    <string name="smallest_for_tablets">Smallest (for tablets)</string>
+    <string name="material_dark">Material Dark</string>
+    <string name="material_light">Material Light</string>
+    <string name="pure_black">Pure Black</string>
+    <string name="white">White</string>
+    <string name="purple">Purple</string>
+    <string name="blue">Blue</string>
+    <string name="layout">Layout</string>
+    <string name="qwerty">Qwerty</string>
+    <string name="azerty">Azerty</string>
+    <string name="tutorial_to_enable_keyboard">Tutorial to enable keyboard</string>
+    <string name="first_enable_codeboard">First, enable Codeboard</string>
+    <string name="enable_keyboard">Enable Keyboard</string>
+    <string name="next_choose_codeboard_as_your_keyboard">Next, choose CodeBoard as your keyboard</string>
+    <string name="choose_keyboard">Choose Keyboard</string>
+</resources>

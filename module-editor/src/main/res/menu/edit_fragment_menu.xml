@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/save"
+        android:title="@string/menu_item_save"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/preview"
+        android:icon="@drawable/ic_preview_white_24dp"
+        android:title="@string/menu_item_preview"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/rename"
+        android:enabled="false"
+        android:title="@string/menu_item_rename"/>
+    <item
+        android:id="@+id/delete"
+        android:enabled="false"
+        android:title="@string/menu_item_delete"/>
+    <item
+        android:id="@+id/clear_all"
+        android:title="@string/menu_item_clear_all"/>
+    <item
+        android:id="@+id/md_docs"
+        android:title="@string/menu_item_docs"/>
+    <item
+        android:id="@+id/statistics"
+        android:title="@string/menu_item_statistics"/>
+</menu>

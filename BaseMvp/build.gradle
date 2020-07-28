@@ -1,0 +1,46 @@
+apply from: "../../TimeCatGradle/config_base.gradle"
+
+dependencies {
+    testImplementation 'junit:junit:4.13-beta-3'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    //support
+    api rootProject.ext.androidx_lib["core"]
+    api rootProject.ext.androidx_lib["appcompat"]
+
+    //RxAndroid
+    api 'io.reactivex.rxjava2:rxjava:2.2.10'
+    api rootProject.ext.dependencies["rxandroid"]
+
+    //RxBus
+    api 'com.hwangjr.rxbus:rxbus:2.0.1'
+
+    //Retrofit
+    api 'com.squareup.retrofit2:retrofit:2.6.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+    api 'com.squareup.retrofit2:converter-scalars:2.6.0'
+
+}
+
+
+//////// 打包发布配置开始 ////////
+apply plugin: 'maven'
+ext {
+    // 从Github上clone下来的项目的本地地址
+    GITHUB_REPO_PATH = "../../TimeCatMaven"       //这里指定的就是刚刚新建项目后clone下来的在本地的路径
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'basemvp'
+    PUBLISH_VERSION = rootProject.ext.component_BaseMvp_version
+}
+uploadArchives {
+    repositories.mavenDeployer {
+        def deployPath = file(project.GITHUB_REPO_PATH)
+        repository(url: "file://${deployPath.absolutePath}")
+        pom.project {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
+        }
+    }
+}
+//////// 打包发布配置结束 ////////

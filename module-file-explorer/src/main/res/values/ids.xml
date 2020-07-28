@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <item name="select_all" type="id" />
+    <item name="copy" type="id" />
+    <item name="cut" type="id" />
+    <item name="paste" type="id" />
+    <item name="share" type="id" />
+    <item name="rename" type="id" />
+    <item name="delete" type="id" />
+    <item name="copy_path" type="id" />
+</resources>
