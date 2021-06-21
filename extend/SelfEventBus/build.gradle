@@ -1,0 +1,17 @@
+apply from: "$project.rootDir/TimeCatGradle/config_base.gradle"
+apply plugin: 'kotlin-android'
+
+dependencies {
+    api rootProject.ext.timecat["component-SelfArms"]
+    api "org.greenrobot:eventbus:3.1.1"
+}
+
+ext {
+    // 从Github上clone下来的项目的本地地址
+    DIST_PATH = "../../TimeCatMaven"
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'SelfEventBus'
+    PUBLISH_VERSION = rootProject.ext.component_SelfEventBus_version
+}
+apply from: "$project.rootDir/TimeCatGradle/publish.gradle"
+

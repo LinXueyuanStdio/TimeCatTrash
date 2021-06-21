@@ -1,0 +1,33 @@
+apply from: "$project.rootDir/TimeCatGradle/config_base.gradle"
+
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    defaultConfig {
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+}
+
+greendao {
+    schemaVersion 2
+    daoPackage 'com.timecat.component.greendao.dao'
+    targetGenDir 'src/main/java'
+}
+
+dependencies {
+    api rootProject.ext.dependencies["joda-time"]
+
+    api 'org.greenrobot:greendao:3.2.2'
+    api 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v2.1.0'
+}
+
+ext {
+    // 从Github上clone下来的项目的本地地址
+    DIST_PATH = "../../TimeCatMaven"
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'CommonGreenDao'
+    PUBLISH_VERSION = rootProject.ext.component_CommonGreenDao_version
+}
+
+apply from: "$project.rootDir/TimeCatGradle/publish.gradle"
+apply from: "$project.rootDir/TimeCatGradle/analysis.gradle"

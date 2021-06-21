@@ -1,0 +1,37 @@
+apply from: "$project.rootDir/TimeCatGradle/config_base.gradle"
+
+apply plugin: 'kotlin-android'
+apply plugin: 'com.alipay.apollo.baseline.config'
+
+android {
+    defaultConfig {
+        ndk {
+            abiFilters 'armeabi'
+        }
+    }
+}
+
+dependencies {
+    api rootProject.ext.timecat["component-SelfArms"]
+//    api rootProject.ext.dependencies["arouter"]
+    api rootProject.ext.dependencies["kotlin-stdlib"]
+    // mPaaS 基线
+    api platform("com.mpaas.android:$mpaas_artifact:$mpaas_baseline")
+    // 小程序
+    api 'com.mpaas.android:tinyapp'
+    // 账户通
+    api 'com.mpaas.android:inside'
+}
+
+
+
+ext {
+    // 从Github上clone下来的项目的本地地址
+    DIST_PATH = "../../TimeCatMaven"
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'SelfAliyun'
+    PUBLISH_VERSION = rootProject.ext.component_SelfAliyun_version
+}
+apply from: "$project.rootDir/TimeCatGradle/publish.gradle"
+apply from: "$project.rootDir/TimeCatGradle/analysis.gradle"
+

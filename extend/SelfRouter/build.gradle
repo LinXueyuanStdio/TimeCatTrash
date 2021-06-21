@@ -1,0 +1,17 @@
+apply from: "$project.rootDir/TimeCatGradle/config_base.gradle"
+
+dependencies {
+    api rootProject.ext.timecat["component-SelfArms"]
+    api rootProject.ext.dependencies["router"]
+}
+
+ext {
+    // 从Github上clone下来的项目的本地地址
+    DIST_PATH = "../../TimeCatMaven"
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'SelfRouter'
+    PUBLISH_VERSION = rootProject.ext.component_SelfRouter_version
+}
+apply from: "$project.rootDir/TimeCatGradle/publish.gradle"
+apply from: "$project.rootDir/TimeCatGradle/analysis.gradle"
+

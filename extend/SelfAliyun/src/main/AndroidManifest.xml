@@ -1,0 +1,17 @@
+<manifest package="com.timecat.component.aliyun"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- 小程序 aar 配置-->
+        <meta-data
+            android:name="nebula.android.meta.enable"
+            android:value="true" />
+        <!--UC开发者Key-->
+        <meta-data
+            android:name="UCSDKAppKey"
+            android:value="d5+Zpj/6x5FVnXLNEymjCPa55sMU+c0h1U2VaBHfYN2mgr9+pJGj/+PCfmYBzMM97uoeNqSzrIiqGg5YdXVXQw==" />
+        <!--组件化-->
+        <meta-data
+            android:name="com.timecat.component.aliyun.GlobalConfiguration"
+            android:value="ConfigModule"/>
+    </application>
+</manifest>

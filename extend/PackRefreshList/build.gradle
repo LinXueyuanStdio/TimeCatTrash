@@ -1,0 +1,20 @@
+apply from: "$project.rootDir/TimeCatGradle/config_base.gradle"
+
+apply plugin: 'kotlin-android'
+
+dependencies {
+    api 'com.yanzhenjie:recyclerview-swipe:1.0.2'
+    api 'eu.davidea:flexible-adapter:5.1.0'
+    api 'eu.davidea:flexible-adapter-ui:1.0.0'
+}
+
+ext {
+    // 从Github上clone下来的项目的本地地址
+    DIST_PATH = "../../TimeCatMaven"
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'PackRefreshList'
+    PUBLISH_VERSION = rootProject.ext.component_PackRefreshList_version
+}
+
+apply from: "$project.rootDir/TimeCatGradle/publish.gradle"
+apply from: "$project.rootDir/TimeCatGradle/analysis.gradle"

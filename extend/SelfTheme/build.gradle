@@ -1,0 +1,25 @@
+apply from: "$project.rootDir/TimeCatGradle/config_base.gradle"
+
+apply plugin: 'kotlin-android'
+
+dependencies {
+    api rootProject.ext.timecat["component-SelfArms"]
+    //换肤
+    api 'skin.support:skin-support:4.0.6'                   // skin-support
+//    api 'skin.support:skin-support-appcompat:4.0.6'         // skin-support 基础控件支持
+//    api 'skin.support:skin-support-design:4.0.6'            // skin-support-design material design 控件支持[可选]
+//    api 'skin.support:skin-support-cardview:4.0.4'          // skin-support-cardview CardView 控件支持[可选]
+//    api 'skin.support:skin-support-constraint-layout:4.0.6' // skin-support-constraint-layout ConstraintLayout 控件支持[可选]
+}
+
+ext {
+    // 从Github上clone下来的项目的本地地址
+    DIST_PATH = "../../TimeCatMaven"
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'SelfTheme'
+    PUBLISH_VERSION = rootProject.ext.component_SelfTheme_version
+}
+
+apply from: "$project.rootDir/TimeCatGradle/publish.gradle"
+apply from: "$project.rootDir/TimeCatGradle/analysis.gradle"
+

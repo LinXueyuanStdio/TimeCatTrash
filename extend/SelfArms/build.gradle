@@ -1,0 +1,25 @@
+apply from: "$project.rootDir/TimeCatGradle/config_base.gradle"
+apply plugin: 'kotlin-android'
+
+
+dependencies {
+    api 'me.jessyan:arms:2.5.0'
+    api rootProject.ext.dependencies["rxandroid"]
+    api rootProject.ext.dependencies["okhttp3:logging-interceptor"]
+    api rootProject.ext.androidx_lib["lifecycle-extensions"]
+}
+repositories {
+    mavenCentral()
+}
+
+ext {
+    // 从Github上clone下来的项目的本地地址
+    DIST_PATH = "../../TimeCatMaven"
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'SelfArms'
+    PUBLISH_VERSION = rootProject.ext.component_SelfArms_version
+}
+
+apply from: "$project.rootDir/TimeCatGradle/publish.gradle"
+apply from: "$project.rootDir/TimeCatGradle/analysis.gradle"
+

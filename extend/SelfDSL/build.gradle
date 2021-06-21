@@ -1,0 +1,29 @@
+apply from: "$project.rootDir/TimeCatGradle/config_base.gradle"
+
+apply plugin: 'kotlin-android'
+
+android {
+    defaultConfig {
+        ndk {
+            abiFilters 'armeabi'
+        }
+    }
+}
+
+dependencies {
+//    api rootProject.ext.timecat["component-SelfArms"]
+//    api rootProject.ext.dependencies["arouter"]
+    api rootProject.ext.dependencies["kotlin-stdlib"]
+}
+
+ext {
+    // 从Github上clone下来的项目的本地地址
+    DIST_PATH = "../../TimeCatMaven"
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'SelfDSL'
+    PUBLISH_VERSION = rootProject.ext.component_SelfDSL_version
+}
+apply from: "$project.rootDir/TimeCatGradle/publish.gradle"
+apply from: "$project.rootDir/TimeCatGradle/analysis.gradle"
+
+

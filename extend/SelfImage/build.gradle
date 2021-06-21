@@ -1,0 +1,36 @@
+apply from: "$project.rootDir/TimeCatGradle/config_base.gradle"
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    api rootProject.ext.dependencies["kotlin-stdlib"]
+
+    //本地和云端图片加载器
+    compileOnly rootProject.ext.dependencies["glide"]
+
+    //云端图片九宫格 自己实现
+
+    //云端图片预览器 支持gif
+    api 'com.github.SherlockGougou:BigImageViewPager:v4_6.0.0'
+
+    //本地图片选择器 支持gif video audio
+    //本地图片预览器 支持gif video audio
+    //本地图片编辑器 只支持图片旋转 裁剪 压缩
+    api 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.6'
+
+    //本地图片九宫格 用 RecyclerView 实现
+}
+
+ext {
+    // 从Github上clone下来的项目的本地地址
+    DIST_PATH = "../../TimeCatMaven"
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'SelfService'
+    PUBLISH_VERSION = rootProject.ext.component_SelfService_version
+}
+
+apply from: "$project.rootDir/TimeCatGradle/publish.gradle"
+apply from: "$project.rootDir/TimeCatGradle/analysis.gradle"
+

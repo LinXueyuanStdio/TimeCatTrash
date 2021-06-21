@@ -1,0 +1,50 @@
+apply from: "$project.rootDir/TimeCatGradle/config_base.gradle"
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.novoda.build-properties'
+
+buildProperties {
+    notThere {
+        file rootProject.file('local.properties')
+    }
+    secrets {
+        file rootProject.file('gradle.properties')
+    }
+}
+
+android {
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        buildConfigField "String", "BMOB_APP_ID", (buildProperties.secrets['BMOB_APP_ID'] | buildProperties.notThere['BMOB_APP_ID']).string
+    }
+}
+
+dependencies {
+    api rootProject.ext.timecat["component-SelfArms"]
+    api rootProject.ext.timecat["component-SelfData"]
+
+    // bmob需要
+    api rootProject.ext.dependencies["retrofit-adapter-rxjava"]
+    api rootProject.ext.dependencies["retrofit-adapter-rxjava2"]
+    api rootProject.ext.dependencies["retrofit-converter-gson"]
+    api rootProject.ext.dependencies["rxjava2"]
+    api rootProject.ext.dependencies["rxandroid2"]
+
+    // Bmob
+    api 'cn.bmob.android:bmob-sdk:3.6.9'
+}
+
+ext {
+    // 从Github上clone下来的项目的本地地址
+    DIST_PATH = "../../TimeCatMaven"
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'CommonBmob'
+    PUBLISH_VERSION = rootProject.ext.component_CommonBmob_version
+}
+
+apply from: "$project.rootDir/TimeCatGradle/publish.gradle"
+apply from: "$project.rootDir/TimeCatGradle/analysis.gradle"
+
+

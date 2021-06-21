@@ -1,0 +1,14 @@
+apply from: "$project.rootDir/TimeCatGradle/config_base.gradle"
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    api rootProject.ext.timecat["component-CommonData"]
+    api rootProject.ext.timecat["component-CommonGreenDao"]
+    api rootProject.ext.timecat["component-CommonBmob"]
+    api rootProject.ext.timecat["component-CommonRoom"]
+
+    api rootProject.ext.timecat["component-CommonSetting"]
+}

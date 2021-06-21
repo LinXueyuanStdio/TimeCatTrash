@@ -1,0 +1,24 @@
+apply from: "$project.rootDir/TimeCatGradle/config_base.gradle"
+
+apply plugin: 'kotlin-android'
+
+dependencies {
+    api rootProject.ext.timecat["component-CommonStatic"]
+    api rootProject.ext.timecat["component-SelfArms"]
+    api rootProject.ext.dependencies["kotlin-stdlib"]
+    api 'com.tencent:mmkv:1.0.16'
+}
+
+ext {
+    // 从Github上clone下来的项目的本地地址
+    DIST_PATH = "../../TimeCatMaven"
+
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'CommonSetting'
+    PUBLISH_VERSION = rootProject.ext.component_CommonSetting_version
+}
+
+apply from: "$project.rootDir/TimeCatGradle/publish.gradle"
+apply from: "$project.rootDir/TimeCatGradle/analysis.gradle"
+
+

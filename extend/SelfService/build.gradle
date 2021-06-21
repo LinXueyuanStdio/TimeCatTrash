@@ -1,0 +1,18 @@
+apply from: "$project.rootDir/TimeCatGradle/config_base.gradle"
+
+dependencies {
+    api rootProject.ext.androidx_lib["appcompat"]
+}
+
+ext {
+    // 从Github上clone下来的项目的本地地址
+    DIST_PATH = "../../TimeCatMaven"
+    PUBLISH_GROUP_ID = 'com.timecat.component'
+    PUBLISH_ARTIFACT_ID = 'SelfService'
+    PUBLISH_VERSION = rootProject.ext.component_SelfService_version
+}
+
+apply from: "$project.rootDir/TimeCatGradle/publish.gradle"
+apply from: "$project.rootDir/TimeCatGradle/analysis.gradle"
+
+
